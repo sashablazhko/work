@@ -1,43 +1,10 @@
-<div class="page-header">
-    <h1> Список плоскостей </h1>
-</div>
-<div class="page-test">
-    <input type="text" [(ngModel)]="name">
-    <p [textContent]="name"></p>
-    <child-comp [userName]="name" [userAge]="age"></child-comp>
-</div>
-<div class="panel">
-    <div class="form-inline">
-        <div class="form-group">
-            <div class="col-md-8">
-                <input class="form-control" [(ngModel)]="text" placeholder = "Название" />
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-6">
-                <input type="number" class="form-control" [(ngModel)]="price" placeholder="Цена" />
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-8">
-                <button class="btn btn-default" (click)="addItem(text, price)">Добавить</button>
-            </div>
-        </div>
-    </div>
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Предмет</th>
-                <th>Цена</th>
-                <th>Куплено</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let item of items">
-                <td>{{item.purchase}}</td>
-                <td>{{item.price}}</td>
-                <td><input type="checkbox" [(ngModel)]="item.done" /></td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<h1 class="lesson-title">
+    Boards
+</h1>
+
+<nav>
+    <a routerLink="/home" routerLinkActive="active">Home</a>
+    <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
+</nav>
+
+<router-outlet></router-outlet>
