@@ -11,12 +11,12 @@ import { Component } from "@angular/core";
     </app-voter>
   `
 })
-export class HeroesComponent{
+export class HeroesComponent {
 	agreed = 0;
-	disagred = 0;
+	disagreed = 0;
 	voters = ['Borad', 'Citilight', 'custom'];
 
 	onVoted(agreed: boolean) {
-		agreed ? this.agreed++ : this.disagred++;
+		agreed ? this.agreed++ : this.disagreed++;
 	}
 }
